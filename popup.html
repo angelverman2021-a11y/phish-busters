@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phish Busters</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <img src="../../assets/icons/icon8.png" alt="Phish Busters Logo" style="width: 85px; height: 85px;">
+        <div>
+          <h1>Phish Busters</h1>
+          <p class="tagline">Stay Safe, Stay Smart</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- User Stats Dashboard -->
+    <div class="dashboard">
+      <div class="stat-card">
+        <div class="stat-label">Rank</div>
+        <div class="stat-value" id="userRank">Rookie</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">XP</div>
+        <div class="stat-value" id="userXP">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Accuracy</div>
+        <div class="stat-value" id="userAccuracy">0%</div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p class="progress-text" id="progressText">0 / 100 XP to next rank</p>
+
+    <!-- Quick Actions -->
+    <div class="actions">
+      <button class="btn btn-primary" id="scanSelectedText">
+        🔍 Scan Selected Text
+      </button>
+      <button class="btn btn-secondary" id="viewHistory">
+        📊 View History
+      </button>
+    </div>
+
+    <!-- Stats Summary -->
+    <div class="summary">
+      <h3>Your Stats</h3>
+      <div class="summary-row">
+        <span>Total Scans:</span>
+        <span id="totalScans">0</span>
+      </div>
+      <div class="summary-row">
+        <span>Phishing Detected:</span>
+        <span id="phishingDetected">0</span>
+      </div>
+      <div class="summary-row">
+        <span>Correct Guesses:</span>
+        <span id="correctGuesses">0</span>
+      </div>
+    </div>
+
+    <!-- Tips Section -->
+    <div class="tips">
+      <h4>🎯 Quick Tips</h4>
+      <ul>
+        <li>Check sender email carefully</li>
+        <li>Look for urgent language</li>
+        <li>Verify links before clicking</li>
+        <li>Watch for spelling errors</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+.container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  min-height: 500px;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background: #0f0f0f;
+}
+
+.stat-card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,234,255,0.3);
+  border: 1px solid #333;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.progress-container {
+  margin: 0 20px;
+  height: 8px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00eaff 0%, #00ff88 100%);
+  width: 0%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 11px;
+  color: #888;
+  margin: 5px 0 20px;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.actions {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  color: white;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 10px rgba(0,234,255,0.3);
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+.btn-secondary {
+  background: #1a1a1a;
+  color: #00eaff;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 10px rgba(0,234,255,0.3);
+}
+
+.summary {
+  padding: 20px;
+  border-top: 1px solid #333;
+  background: #0f0f0f;
+}
+
+.summary h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+}
+
+.summary-row span:last-child {
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.tips {
+  padding: 20px;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.tips h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.tips ul {
+  list-style: none;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.tips li {
+  padding: 4px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.tips li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00eaff;
+  font-weight: bold;
+}
