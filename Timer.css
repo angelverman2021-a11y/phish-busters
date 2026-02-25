@@ -1,0 +1,29 @@
+.timer-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.timer-circle {
+  position: relative;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.timer-container.urgent .timer-text {
+  color: #dc3545;
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}

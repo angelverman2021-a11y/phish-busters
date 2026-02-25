@@ -1,0 +1,50 @@
+.risk-meter {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.risk-meter h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.risk-low { color: #28a745; }
+.risk-medium { color: #ffc107; }
+.risk-high { color: #dc3545; }
+
+.risk-bar {
+  height: 30px;
+  background: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.risk-fill {
+  height: 100%;
+  transition: width 1s ease;
+  animation: fillBar 1s ease;
+}
+
+.risk-fill.risk-low { background: linear-gradient(90deg, #28a745, #5cb85c); }
+.risk-fill.risk-medium { background: linear-gradient(90deg, #ffc107, #ffdb4d); }
+.risk-fill.risk-high { background: linear-gradient(90deg, #dc3545, #ff6b6b); }
+
+@keyframes fillBar {
+  from { width: 0; }
+}
+
+.red-flags {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff3cd;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.red-flags ul {
+  margin: 10px 0 0 20px;
+  color: #856404;
+}

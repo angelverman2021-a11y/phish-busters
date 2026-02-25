@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Generator - Phish Busters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    h1 { color: #333; margin-bottom: 20px; }
+    p { color: #666; margin-bottom: 30px; }
+    .icons { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+    canvas { border: 2px solid #ddd; border-radius: 8px; }
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ Phish Busters Icon Generator</h1>
+    <p>Right-click each icon below and "Save image as..." to the assets/icons/ folder</p>
+    
+    <div class="icons">
+      <div>
+        <canvas id="icon16" width="16" height="16"></canvas>
+        <p>icon16.png</p>
+      </div>
+      <div>
+        <canvas id="icon48" width="48" height="48"></canvas>
+        <p>icon48.png</p>
+      </div>
+      <div>
+        <canvas id="icon128" width="128" height="128"></canvas>
+        <p>icon128.png</p>
+      </div>
+    </div>
+
+    <button onclick="generateIcons()">Generate Icons</button>
+  </div>
+
+  <script>
+    function generateIcons() {
+      generateIcon('icon16', 16);
+      generateIcon('icon48', 48);
+      generateIcon('icon128', 128);
+    }
+
+    function generateIcon(canvasId, size) {
+      const canvas = document.getElementById(canvasId);
+      const ctx = canvas.getContext('2d');
+
+      // Background gradient
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, '#667eea');
+      gradient.addColorStop(1, '#764ba2');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, size, size);
+
+      // Shield icon
+      ctx.fillStyle = 'white';
+      ctx.beginPath();
+      const centerX = size / 2;
+      const centerY = size / 2;
+      const shieldSize = size * 0.6;
+      
+      ctx.moveTo(centerX, centerY - shieldSize / 2);
+      ctx.lineTo(centerX + shieldSize / 2, centerY - shieldSize / 4);
+      ctx.lineTo(centerX + shieldSize / 2, centerY + shieldSize / 4);
+      ctx.lineTo(centerX, centerY + shieldSize / 2);
+      ctx.lineTo(centerX - shieldSize / 2, centerY + shieldSize / 4);
+      ctx.lineTo(centerX - shieldSize / 2, centerY - shieldSize / 4);
+      ctx.closePath();
+      ctx.fill();
+
+      // Checkmark
+      ctx.strokeStyle = '#667eea';
+      ctx.lineWidth = size / 16;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(centerX - shieldSize / 6, centerY);
+      ctx.lineTo(centerX - shieldSize / 12, centerY + shieldSize / 6);
+      ctx.lineTo(centerX + shieldSize / 4, centerY - shieldSize / 6);
+      ctx.stroke();
+    }
+
+    // Generate on load
+    generateIcons();
+  </script>
+</body>
+</html>

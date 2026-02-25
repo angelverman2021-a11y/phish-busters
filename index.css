@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(135deg, #050505 0%, #0f0f0f 50%, #000000 100%);
+    color: white;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .text-glow {
+    text-shadow: 0 0 8px rgba(255,255,255,0.7);
+  }
+  
+  .text-glow-green {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+  }
+  
+  .text-glow-red {
+    color: #ff3b3b;
+    text-shadow: 0 0 10px #ff3b3b;
+  }
+  
+  .text-glow-cyan {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+  }
+  
+  .btn-cyber {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid #00eaff;
+    background: #0f0f0f;
+    color: white;
+  }
+  
+  .btn-cyber:hover {
+    box-shadow: 0 0 10px #00eaff;
+    transform: scale(1.05);
+  }
+  
+  .card-cyber {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    transition: all 0.3s;
+  }
+  
+  .card-cyber:hover {
+    border-color: #00eaff;
+  }
+}
